@@ -54,6 +54,8 @@ fprintf('Normalizing Features ...\n');
 % Add intercept term to X
 X = [ones(m, 1) X];
 
+%fprintf('X after normalization [%f, %f, %f]\n', X);
+
 
 %% ================ Part 2: Gradient Descent ================
 
@@ -104,7 +106,8 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-price = 0; % You should change this
+t=[1650, 3];
+price = [1, (t-mu)./sigma] * theta;
 
 
 % ============================================================
